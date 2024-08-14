@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        .bio-container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .bio-photo {
+            display: block;
+            margin: 0 auto 10px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Circular shape */
+            object-fit: cover; /* Ensures the image covers the circle */
+            border: 2px solid #ccc; /* Optional: border around the photo */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Collapses borders */
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2; /* Light gray background for headers */
+        }
+    </style>
+</head>
+<body bgcolor="red">
+    <div class="bio-container">
+        <h1><u>Welcome To My Webpage</u></h1>
+        
+        <input type="file" id="photoInput" accept="image/*" onchange="displayPhoto(event)">
+        <img id="profilePhoto" src="your-photo-url.jpg" alt="Profile Photo" class="bio-photo" style="display:none;"> <!-- Initially hidden -->
+        
+        <h2>About Me</h2>
+        <p>Hello! My name is Nahid shams. I am a diploma science engineer based in Darbhanga (Bihar).</p>
+
+        <h2>My Interests</h2>
+        <p>I enjoy coding, Sleeping,  spending time read write , waching mob reels .</p>
+
+        <h2>Hobbies</h2>
+        <ol>
+            <li>Craft</li>
+            <li>Applying henna</li>
+            <li>Cooking/Baking -</li>
+        </ol>
+
+        <h2>Skills</h2>
+        <ul>
+            <li>Web Development</li>
+            <li>Python</li>
+        </ul>
+
+        <h2>Educational Qualification</h2>
+        <table>
+            <tr>
+                <th>Degree</th>
+                <th>Institution</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                                <td>Mertic</td>
+              
+                <td>R.N.M Govt girls +2 high school Darbhanga</td>
+  <td>2020</td>
+            </tr>
+            <tr>
+                <td>Non inter</td>
+                <td>Marwadi Darbhanga</td>
+                <td>2021</td>
+            </tr>
+            <tr>
+                <td>Diploma in Computer Science</td>
+                <td>MANUU</td>
+                <td>2022</td>
+            </tr>
+            
+        </table>
+
+        <h2>Work Experience</h2>
+        <table>
+            <tr>
+                <th>Position</th>
+                <th>Company</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>HTML, CSS Developer</td>
+                <td>Intersala</td>
+                <td>2022</td>
+            </tr>
+        </table>
+
+        <h3>Contact Me</h3>
+        <p>Phone: 9523962965</p>
+        <p>nahidkhatoon0933@gmail.com</p>
+    </div>
+
+    <script>
+        function displayPhoto(event) {
+            const photo = document.getElementById('profilePhoto');
+            photo.src = URL.createObjectURL(event.target.files[0]);
+            photo.style.display = 'block'; // Show the image after selection
+        }
+    </script>
+</body>
+</html>
